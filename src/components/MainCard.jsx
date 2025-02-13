@@ -1,17 +1,20 @@
 import "./MainCard.css";
 import CardButton from "./UI/CardButton";
 
-function MainCard() {
+function MainCard({group, name}) {
 
-    const handleClick = () =>{
-        console.log("I was clicked");
+    const handleClick = (func) =>{
+        console.log(`Execution: ${func()}`);
         
     }
     return (
         <div className="main-card">
-            <CardButton onClick={handleClick}>
-                Run
+            <h1>{group.groupName}</h1>
+            {group.items.map((item) => (
+            <CardButton key={item.id} onClick={()=>handleClick(item.func)}>
+                {item.name}
             </CardButton>
+            ))}
         </div>
     );
 }
