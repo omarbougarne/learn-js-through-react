@@ -35,7 +35,27 @@ const arr = [
         {
             id: 3,
             name: 'Substraction',
-            func: function test() { return 5 + 5; }
+            func: function test() { return 5 - 5; }
+        }
+    ],
+},
+{
+    groupLevel: 'Level 3',
+    items: [
+        {
+            id: 1,
+            name: 'Division',
+            func: function test() { return 10 / 2; },
+        },
+        {
+            id: 2,
+            name: 'Evening',
+            func: function test() { return 'Good Evening  World!'; },
+        },
+        {
+            id: 3,
+            name: 'Modulo',
+            func: function test() { return 10 % 2; }
         }
     ],
 }
